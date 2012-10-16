@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -ansi -Wall -g
+
+all: hello
+
+hello: hello.o
+	$(CC) $(CFLAGS) hello.o -o hello
+
+hello.o: hello.c
+	$(CC) -c $(CFLAGS) hello.c -o hello.o
+
+.PHONY: clean
+
+clean:
+	-/bin/rm -f hello
