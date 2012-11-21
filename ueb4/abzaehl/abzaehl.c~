@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+
+int main (int argc, char * argv[]){
+
+  int silben;
+
+  if (argc > 1){
+    sscanf ("%d", &silben);
+    printf ("%d", silben);
+  }
+}
