@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+
+
+
+
+double zweierfolge(double e, double start){
+
+
+  return 0;
+}
+
+
+
+int main (void){
+
+  return 0;
+}
+
