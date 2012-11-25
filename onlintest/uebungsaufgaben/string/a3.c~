@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int tallToLow(int c){
+  int j = c+32;
+  if (c >= 65 && c <= 90)
+    c += j-c;
+
+  return c;
+}
+
+
+
+int main(void){
+
+  return 0;
+
+}
