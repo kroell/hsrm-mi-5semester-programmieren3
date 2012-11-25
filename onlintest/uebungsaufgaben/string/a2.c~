@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+const int length = 10;
+
+void umdrehen(char *w){
+
+
+}
+
+int main(void){
+  
+  char[length] wort = "Hallo";
+
+  printf ("%s\n",wort);
+
+  return 0;
+}

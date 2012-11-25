@@ -21,7 +21,6 @@ double absolut (double value){
   return value;
 }
 
-
 double _zweierfolge(double e, double a, double n){
   double ret;
   ret = potenzieren((2/(double)(2*n-1)),2) * (2*n*n-2*n+1) + ((a-1)/((double)n+1));
@@ -29,7 +28,6 @@ double _zweierfolge(double e, double a, double n){
   if (absolut(ret - a) < e){
     return ret;
   }
-
   return _zweierfolge(e,ret, n+1);
 }
 
@@ -37,7 +35,6 @@ double zweierfolge (double e, double start){
   double n = start;
   return _zweierfolge(e, start, n);
 }
-
 
 int main (void){
   double start = 33;

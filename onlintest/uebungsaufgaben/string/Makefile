@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -ansi -Wall -g
-NAME = heron
+NAME = a2
 
 all: $(NAME)
 
