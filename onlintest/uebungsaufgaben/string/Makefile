@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -ansi -Wall -g
-NAME = a3
+NAME = a1
 
 all: $(NAME)
 
