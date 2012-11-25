@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+static double piArchimedes (double e);
+
+double _piArchimedes(double e, double u){
+
+
+}
+
+double piArchimedes(double e){
+  double u = 3;
+  return _piArchimedes(e,u);
+}
+
+
+int main(void){
+  int e = 0.0000001;
+
+  printf("Ergb: %f\n",piArchimedes(e));
+
+  return 0;
+
+}
