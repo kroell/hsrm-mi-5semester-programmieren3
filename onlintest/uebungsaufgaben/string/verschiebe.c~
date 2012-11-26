@@ -1,0 +1,24 @@
+/*um n stellen verschieben*/
+
+#include <stdlib.h>
+#include <string.h>
+
+
+/* im Test s ueberschreiben und kein return Wert */
+char *verschiebe_links(char *s, int n){
+
+
+}
+
+
+
+int main (void){
+  char *string = "hallo";
+  int n;
+  n = 1;
+  printf("n=1: %s\n",verschiebe_links(string, n));
+
+  n = 2;
+  printf("n=2 %s\n",verschiebe_links(string, n));
+
+}

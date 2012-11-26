@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -ansi -Wall -g
-NAME = a1
+NAME = verschiebe
 
 all: $(NAME)
 
