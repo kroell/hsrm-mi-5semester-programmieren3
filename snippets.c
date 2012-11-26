@@ -32,17 +32,6 @@ double _abs(double value){
   return value;
 }
 
-/* Umwandlung aller Gross- in Kleinbuchstaben */
-int tallToLow(int c){
-  int j = c + 32;
-  
-  if (c >= 65 && c <= 90){
-    c += j-c;
-  }
-
-return c; 
-}
-
 /* Laenge Array mit Enum */
 enum length {length = 10};
 
@@ -55,4 +44,34 @@ size_t _strlen(const char *s){
     size++;
   }
   return size;
+}
+
+/* String kopieren */
+char *_strcpy(char *dest, const char *src){
+  int i = 0;
+  
+  for (i = 0; *(src+i) != '\0'; i++){
+    *(dest+i) = *(src+i);
+  }
+  /* '\0' ans Ende setzen */
+  *(dest+i)  = *(src+i);
+  return dest;
+}
+
+/* Groß- zu Kleinbuchstaben*/
+int tallToLow(int c){
+  int j = c+32;
+  if (c >= 'A' && c <= 'Z')
+    c += j-c;
+
+  return c;
+}
+
+/* Klein- zu Großbuchstaben */
+int lowToTall(int c){
+  int j = c-32;
+  if (c >= 'a' && c <= 'z')
+    c += j-c;
+
+  return c;
 }
