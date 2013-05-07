@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void nurVorneGross(char *s){
+  int i;
+  char c[40] = "";
+
+  for (i=0; *(s+i) != '\0'; i++){
+    *(c+i) = tolower(*(s+i));
+  }
+
+  printf("lower: %s",c);
+
+}
+
+
+
+int main (void){
+  
+  char c[50] = "alleSKlein";
+  nurVorneGross(c);
+
+  return 0;
+}

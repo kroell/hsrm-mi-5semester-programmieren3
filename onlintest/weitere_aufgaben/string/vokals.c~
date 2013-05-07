@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <string.h>
+
+int toLower(char c){
+  if (c >= 65 && c <= 90) return c +32;
+  return c;
+}
+
+char *strdel(char*s){
+  int z;
+
+  for (z=0; *(s+z)!= '\0'; z++){
+    *(s+z) = '\0';
+  }
+
+  return s;
+}
+
+int isVowel(char c){
+  if (c == 'a' || c =='e' || c == 'i' || c == 'o' || c == 'u'){
+    return 1;
+  }
+  return 0;
+}
+
+
+int del_low (char*s){
+  int i = 0;
+  int j = 0;
+  int counter = 0;
+  char * neu = "";
+
+  printf ("Alter String: %s\n", s);
+  strcpy(neu, s);
+  strdel(s);
+
+  for (i = 0; *(neu+i) != '\0'; i++){
+    if (isVowel(*(neu+i)) == 0){
+      s[j] = neu[i];
+      j++;
+    }
+    else{
+      counter++;
+    }
+  }
+
+  printf("Neuer string: %s\n",s);
+  printf("anzahl vokale: %d\n", counter);
+  return counter;
+}
+
+
+
+
+int main(void){
+
+  char *s = "Blaeiou";
+  char a = 'u';
+  del_low(s);
+  printf ("Antwort: %d\n", isVowel(a));
+  return 0;
+}

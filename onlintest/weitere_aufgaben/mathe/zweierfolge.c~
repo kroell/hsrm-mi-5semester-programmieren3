@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+double zweierfolge(double e, double a, double n){
+  double ret;
+  double temp = (2/2*n-1);
+  double temp2 = pow(temp,2);
+  double temp3 = pow(2*n,2);
+  double temp4 = (temp3 - 2*n + 1);
+  double temp5 = (a/n+1);
+  ret = temp2 * temp4 + temp5;
+
+  if (((ret - a)*-1) < e){
+    return ret;
+  }
+  return zweierfolge(e,a,n-1);
+}
+
+int main(void){
+  printf("%d\n", zweierfolge(0.000001, 5, 1);
+  return 0;
+}

@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <strings.h>
+#include <string.h>
+
+const char *myindex(const char *s, int c);
+const char *myrindex(const char *s, int c);
+char *reverse(char *s);
+
+
+const char *myindex(const char *s, int c){
+  
+  const char *reader = s;
+
+  while (*reader){
+    if (*reader == c){
+      return reader;
+    }
+    reader++;
+  }
+  if (*reader == c){
+    return reader;
+  }
+  else{
+    printf("nit drin\n");
+    return 0;
+  }
+}
+
+const char *myrindex(const char *s, int c){
+
+  char *copy = malloc(sizeof(s));
+  strcpy(copy, s);
+
+  char *reader =reverse(copy);
+
+  while (*reader){
+    if (*reader == c){
+      char* temp = reverse(reader+1); /* holl */
+      printf("temp davor: %s\n",temp);     
+      printf("s davor: %s\n", s);
+
+      while (*temp != 0 && *temp == *s){
+	temp++;
+	s++;
+      }
+       printf("temp danach: %s\n",temp);
+       printf("s danach: %s\n",s);
+      return s;
+    }
+    reader++;
+  }
+  /*const char *reader = myindex(reverse_s, c);*/
+  return reader;
+}
+
+char *reverse(char *s){
+  int c,i,j;
+  for(i=0, j=strlen(s)-1; i<j; i++, j--){
+    c = *(s+i);
+    *(s+i) = *(s+j);
+    *(s+j) = c;
+  }
+  return s;
+}
+
+
+int main(void){
+  int c = 'a';
+  char s[] = "hollolalao";
+
+  printf("%s\n", rindex(s,c));
+  printf("%s\n", myrindex(s,c));
+
+  return 0;
+}

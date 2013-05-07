@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct queue{
+  struct queue *next;
+  int value;
+}
+
+typedef struct queue *lqueue;
+
+lqueue enter (lqueue q, int value);
+int is_empty (lqueue q);
+int front (lqueue q);
+lqueue leave (lqueue q);
+
+

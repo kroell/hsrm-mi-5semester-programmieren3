@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int isVokal(char c){
+  if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+    return 1;
+  }
+  return 0;
+}
+
+void strdel(char *s){
+  int i;
+  for (i=0;*(s+i)!='\0'; i++){
+    *(s+i) = '\0';
+  }
+}
+
+
+int str_del_lowervowels(char *s){
+  int counter = 0;
+  int i;
+  char copy[10] = "";
+
+  printf ("String vorher: %s\n", s);
+  strcpy(copy,s);
+  printf ("String copy: %s\n", copy);
+  strdel(s);
+  printf ("String geleert: %s\n", s);
+  
+  for (i=0; *(s+i) != '\0'; i++){
+    if (isVokal(*(s+i))){
+      counter ++;
+    }
+  }
+  
+  return 0;
+}
+
+int str_del_uppervowels(char *s){
+  return 0;
+}
+
+int str_del_vowels(char *s){
+  return 0;
+}
+
+
+int main(void){
+  char s[10] = "abcde";
+  char s2[10] = "abAcdE";
+  int count = str_del_lowervowels(s);
+  print ("Count: %d\n", count);
+  return 0;
+}

@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+struct list{
+  struct list *next;
+  int value;
+};
+
+typedef struct list *liste;
+
+int isEmpty(liste l);
+
+int isEmpty(liste l){
+  if (l == NULL){
+    return 1;
+  }
+  return 0;
+}
+
+
+liste enter(liste l, int value){
+  
+  if(isEmpty(l)){
+    l = malloc(sizeof(*l));
+    
+  }
+
+
+  return l;
+}
+
+
+
+
+int main (void){
+  return 0;
+}

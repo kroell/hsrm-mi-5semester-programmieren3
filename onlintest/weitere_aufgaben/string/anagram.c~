@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+int isAnagram(char *s1, char *s2){
+
+  char *reader1 = s1;
+  char *reader2 = s2;
+  int len1 = strlen(s1);
+  int len2 = strlen(s2);
+  int counter = 0;
+  while (*reader1){
+    char c = *reader1;
+    if (c == *reader2){
+      counter++;
+      *reader1++;
+    }
+    *reader2++;
+  }
+  printf("counter: %d\n",counter);
+
+
+  return 0;
+}
+
+
+int main(void){
+  char s1[] = "erbgut";
+  char s2[] = "geburt";
+  isAnagram(s1,s2);
+  return 0;
+}

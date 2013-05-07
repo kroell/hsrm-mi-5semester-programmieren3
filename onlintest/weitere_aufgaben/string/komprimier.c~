@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <string.h>
+
+void kompri(char *str);
+int stellenAnz(int i);
+char* convert(int z);
+
+
+void kompri(char *str){
+  char *reader = str;
+  char *writer = str;
+  int i = 0;
+
+  /*String durchlaufen*/
+  while(*reader){
+    /*Aktueller Buchstaben*/
+    char c = *reader;
+    while(c == *reader){
+      reader++;
+      i++;
+    }
+    /*Aktueller Buchstabe wird geschrieben*/
+    *writer++ = c;
+   
+    if(i > 1){
+     char *s = convert(i);
+     printf("%s\n",s);
+     while(*s){
+      *writer++ = *s--; 
+     }
+    }
+    /*i zuruecksetzen*/
+    i = 0;
+  }
+  *writer = '\0';
+}
+
+char* convert(int z){
+  int stellen = stellenAnz(z);
+  char *str = malloc(sizeof(char)*stellen *2);
+  char *w =str;
+  while(z  > 0){
+    *w++ = (char)((z%10)+48);
+    z = z / 10;
+  }
+  return (w-1);
+}
+
+int stellenAnz(int i){
+  int anz = 0;
+  while(i > 0){
+    i= i /10;
+    anz++;
+  }
+  return anz;
+}
+
+
+int main(void){
+  
+  char str[] = "abbbcccccccc";
+  printf("String %s\n", str);
+  kompri(str);
+  printf("String %s\n", str);
+  
+  return 0;
+}

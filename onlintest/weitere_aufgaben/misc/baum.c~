@@ -1,0 +1,27 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+
+struct tree{
+  int anz;
+  char wort[31];
+  struct tree *liBlatt;
+  struct tree *reBlatt;
+};
+
+typedef struct tree *baum;
+
+baum blattErstellen(char *s);
+baum hinzufuegen(baum b, char *s);
+void show(baum b);
+void showAnzahl(baum b, int anz);
+int countAnzahl(baum b, int anz);
+char *get(baum b, char *key);
+int contains(baum b, char *key);
+
+
+
+int main (void){
+
+}

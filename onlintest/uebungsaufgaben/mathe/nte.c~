@@ -1,0 +1,25 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+
+
+double _pow(double basis, int exp){
+  double ret = 1;
+  int i;
+
+  if (exp == 0)return 1;
+
+  for (i = 0; i < exp; i++){
+    ret *= basis;
+  }
+  return basis;
+}
+
+
+int main(void){
+  double ep = 0.000001;
+  double x = 2;
+
+  printf("ergebnis: %f", nte(ep,x));
+  return 0;
+}

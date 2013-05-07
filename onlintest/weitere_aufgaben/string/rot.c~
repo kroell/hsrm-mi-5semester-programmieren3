@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+char *rotiereLinks(char *s, int n);
+char *rotiereRechts(char *s, int n);
+
+char *rotiereLinks(char *s, int n){
+
+  
+
+}
+
+
+char *rotiereRechts(char *s, int n){
+
+  
+
+}
+
+
+
+int main (void){
+
+  char s[]="Dies";
+  char s2[]="Dies ist ein Text";
+
+  printf("\nString: %s\n", s);
+  printf("Rotiere Rechts: %s\n",rotiereRechts(s,10));
+
+  /*printf("\nString: %s\n", s2);
+    printf("Rotiere Links: %s\n", rotiereLinks(s2,15));*/
+
+  return 0;
+}

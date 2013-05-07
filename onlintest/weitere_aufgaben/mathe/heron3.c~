@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+const double e = 0.0000001;
+
+double start(double x){
+  return (1+x)/2;
+}
+
+double heron(double w, double x){
+  double temp = (w+(x/w))/2;
+  if ((temp-w) < e)
+    return temp;
+  return heron(temp,x);
+}
+
+
+int main(void){
+  double x = 2;
+  double s = start(x);
+  printf("Heron: %f\n", heron(start,x);
+
+
+  return 0;
+}

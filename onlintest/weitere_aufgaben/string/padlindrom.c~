@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <ctype.h>
+
+
+
+int isPalindrom(char *s){
+
+  return 0;
+
+}
+
+
+
+
+int main(void){
+  
+  char s[10] = 'anna';
+
+  int ret = isPalindrom(s);
+
+  printf ("ret: %d\n", ret);
+  
+  return 0;
+}
