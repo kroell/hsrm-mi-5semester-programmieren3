@@ -1,12 +1,10 @@
+#Aufgabe 4
 import sys
 
 class SortedDict(object):
 
-    def __init__(self, dic=None):
-        if dic == None:
-            self.dic = {}
-        else:
-            self.dic = dic
+    def __init__(self,dic={}):
+        self.dic = dic
 
     def values(self):
         return self.dic.values()
@@ -23,10 +21,11 @@ class SortedDict(object):
     def __contains__(self,item):
         return (item in self.dic)
 
+    def __getitem__(self,index):
+        return self.dic[index]
+
     def __iter__(self):
         for i in sorted(self.dic):
             yield i
 
-    def __getitem__(self,index):
-        return self.dic[index]
     
