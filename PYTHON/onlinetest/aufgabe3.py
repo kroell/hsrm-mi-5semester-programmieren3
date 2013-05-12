@@ -21,7 +21,7 @@ def gen2(s):
                     s1 += s[i].upper()
                 else:
                     s1 += s[i].lower()
-                    x += 1
+            x += 1
             yield s1
         else:
             for i in range(length):
@@ -29,7 +29,7 @@ def gen2(s):
                     s1 += s[i].lower()
                 else:
                     s1 += s[i].upper()
-                    y += 1
+            y += 1
             yield s1
 
 def gen3(lis):

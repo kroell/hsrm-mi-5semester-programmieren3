@@ -20,25 +20,23 @@ def gen(s):
             for i in range(length):
                 if x == i:
                     s1 += s[i].upper()
-                    #x += 1
                 else:
                     s1 += s[i].lower()
             x += 1
-            yield s1
+            s = s1
+            yield s
         else:
-            for i in range(length):
-                if y == i:
-                    s1 += s[i].lower()
-                else:
-                    s1 += s[i].upper()
-            y += 1
-            yield s1
+            if x == length:
+                s = s[:-1].upper()+s[-1:].lower()
+            else:
+                s = s.upper()
+            x+=1
+            yield s
 
 
 if __name__ == '__main__':
     s = "abc"
     g = gen(s)
-    print g.next()
     print g.next()
     print g.next()
     print g.next()
