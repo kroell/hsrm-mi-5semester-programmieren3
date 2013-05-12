@@ -1,5 +1,5 @@
+# Aufgabe 2
 import sys
-
 
 def umwandeln(s):
     dic = {}
