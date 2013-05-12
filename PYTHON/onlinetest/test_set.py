@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from set2 import Set # die eigene zu testende Klasse
+from set3 import Set # die eigene zu testende Klasse
 import unittest
 
 class TestSet(unittest.TestCase):
